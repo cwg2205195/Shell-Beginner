@@ -1,0 +1,6 @@
+#!/bin/sh
+#This program will erase some log file .
+cat /dev/null > /var/log/secure >&2
+cat /dev/null > /var/log/messages >&2
+cat /dev/null > /var/log/httpd/access_log >&2
+echo "All logs have been erased !"
