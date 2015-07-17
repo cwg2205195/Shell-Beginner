@@ -1,0 +1,17 @@
+#!/bin/sh
+#This program will erase log file after you run it in 3 minutes , though you can change the time whatever you want.
+#You 
+#Do remember run this program in background ! eg:erase_log_adv &
+echo "You got 3 minutes left before the log file was erased ! Hurry up !"
+sleep 150 #Here set the time you want , but not the whole time .
+time1=30
+while [ $time1 -gt 0 ]
+do
+  time1=$[ $time - 1 ]
+  echo "You got $time1 left ! Come on !"
+  sleep 1
+done
+cat /dev/null > /var/log/secure >&2
+cat /dev/null > /var/log/message >&2
+cat /dev/null > /var/log/httpd/access_log >&2
+echo "All log file have been erased ! You have to log out !"
