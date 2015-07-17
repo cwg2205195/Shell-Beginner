@@ -1,0 +1,7 @@
+#!/bin/sh
+#This program will redirect every line that you want to redirect . 
+#Here is the example .
+exec 3>redirect3
+echo "This is standard output"
+echo "This will go to redirect3">&3
+echo "All test have been finished ! Check out !"
