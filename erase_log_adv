@@ -1,7 +1,7 @@
 #!/bin/sh
 #This program will erase log file after you run it in 3 minutes , though you can change the time whatever you want.
 #You 
-#Do remember run this program in background ! eg:erase_log_adv &
+#Do remember run this program in background and flee from your bash ! eg:nohup erase_log_adv &
 echo "You got 3 minutes left before the log file was erased ! Hurry up !"
 sleep 150 #Here set the time you want , but not the whole time .
 time1=30
