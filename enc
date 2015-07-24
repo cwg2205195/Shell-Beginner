@@ -1,0 +1,8 @@
+#!/bin/sh
+#This program will encrypt characters by reverse alphabet
+file=$1
+function enc {
+cat $file | sed 'y/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA/'
+}
+enc > encrypted_doc
+echo "File has been encrypted !"
