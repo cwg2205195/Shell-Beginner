@@ -1,0 +1,8 @@
+#!/bin/sh
+#This program will decrypted the file which encrypted by enc 
+file=$1
+function dec {
+cat $file | sed 'y/zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/'
+}
+dec > decrypted_doc
+echo "File has been decrypted !"
